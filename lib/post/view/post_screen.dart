@@ -53,38 +53,35 @@ class _PostScreenState extends State<PostScreen> {
 
   Widget showJson(int i) {
     return Container(
-      height: 50,
+      height: 75,
       width: double.infinity,
       margin: EdgeInsets.symmetric(vertical: 5),
       decoration: BoxDecoration(color: Colors.white),
-      child: Row(
-        children: [
-          Spacer(),
-          Text(
-            "${postProviderFalse!.jsonList[i]['id']}",
-            style: TextStyle(letterSpacing: 1, fontSize: 20),
-          ),
-          Spacer(),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 5),
-            child: Container(
-              height: 50,
-              width: 330,
-              child: Center(
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    "${postProviderFalse!.jsonList[i]['title']}",
-                    style: TextStyle(
-                        letterSpacing: 1,
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "${postProviderFalse!.jsonList[i]['id']}",
+                style: TextStyle(letterSpacing: 1, fontSize: 20),
               ),
             ),
-          )
-        ],
+            Divider(color: Colors.black,thickness: 1),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "${postProviderFalse!.jsonList[i]['title']}",
+                style: TextStyle(
+                    letterSpacing: 1,
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

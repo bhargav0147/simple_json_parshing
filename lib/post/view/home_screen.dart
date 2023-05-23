@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: Colors.white,
                         fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 25),
+                  SizedBox(height: 35),
                   ElevatedButton(
                     onPressed: () {
                     Navigator.pushNamed(context, 'post');
@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     style:
                         ElevatedButton.styleFrom(backgroundColor: Colors.white),
                   ),
-                  SizedBox(height: 25),
+                  SizedBox(height: 35),
                   ElevatedButton(
                     onPressed: () {
                       Navigator.pushNamed(context, 'user');
@@ -62,9 +62,39 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     style:
                     ElevatedButton.styleFrom(backgroundColor: Colors.white),
+                  ),
+                  SizedBox(height: 35),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'cart');
+                    },
+                    child: Text(
+                      "Cart",
+                      style: TextStyle(
+                          letterSpacing: 1,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    style:
+                    ElevatedButton.styleFrom(backgroundColor: Colors.white),
+                  ),
+                  SizedBox(height: 35),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'products');
+                    },
+                    child: Text(
+                      "Products",
+                      style: TextStyle(
+                          letterSpacing: 1,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    style:
+                    ElevatedButton.styleFrom(backgroundColor: Colors.white),
                   )
                 ],
               ),
-            )));
+            ),),);
   }
 }
