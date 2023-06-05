@@ -37,6 +37,16 @@ class _UserScreenState extends State<UserScreen> {
             Navigator.pop(context);
           },
         ),
+        actions: [
+          Center(
+            child: Text(
+              "User",
+              style: TextStyle(
+                  letterSpacing: 1, fontSize: 20, color: Colors.white),
+            ),
+          ),
+          SizedBox(width: 10)
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
@@ -49,7 +59,6 @@ class _UserScreenState extends State<UserScreen> {
       ),
     ));
   }
-
   Widget showJson(int i) {
     return Container(
       height: 480,

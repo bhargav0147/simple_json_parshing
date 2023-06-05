@@ -35,6 +35,16 @@ class _CartScreenState extends State<CartScreen> {
             Navigator.pop(context);
           },
         ),
+        actions: [
+          Center(
+            child: Text(
+              "Cart",
+              style: TextStyle(
+                  letterSpacing: 1, fontSize: 20, color: Colors.white),
+            ),
+          ),
+          SizedBox(width: 10)
+        ],
       ),
       body: ListView.builder(
         itemBuilder: (context, index) => showJson(index),

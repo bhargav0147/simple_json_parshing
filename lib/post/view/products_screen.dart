@@ -16,7 +16,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
   @override
   void initState() {
     super.initState();
-    // Provider.of<PostProvider>(context, listen: false).productsGetJson();
+    Provider.of<PostProvider>(context, listen: false).getprojson();
   }
   @override
   Widget build(BuildContext context) {
@@ -37,12 +37,22 @@ class _ProductsScreenState extends State<ProductsScreen> {
             Navigator.pop(context);
           },
         ),
+        actions: [
+          Center(
+            child: Text(
+              "Product",
+              style: TextStyle(
+                  letterSpacing: 1, fontSize: 20, color: Colors.white),
+            ),
+          ),
+          SizedBox(width: 10)
+        ],
       ),
       body: GridView.builder(
           gridDelegate:
               SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,mainAxisExtent: 210),
           itemBuilder: (context, index) => print(index),
-          itemCount: postProviderTrue!.proList.length),
+          itemCount: postProviderTrue!.productList.length),
     ));
   }
 
@@ -62,7 +72,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(15),
                   child: Image.network(
-                    '${postProviderFalse!.proList[index].image}',
+                    '${postProviderFalse!.productList[index].image}',
                     fit: BoxFit.fill,
                   ),
                 )),
@@ -70,7 +80,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                "${postProviderFalse!.proList[index].cate}",
+                "${postProviderFalse!.productList[index].cate}",
                 style:
                     TextStyle(color: Colors.white, fontSize: 15, letterSpacing: 1),
               ),
@@ -79,12 +89,12 @@ class _ProductsScreenState extends State<ProductsScreen> {
             Row(
               children: [
                 Text(
-                  "${postProviderFalse!.proList[index].rate!.rate}",
+                  "${postProviderFalse!.productList[index].rate!.rate}",
                   style:
                   TextStyle(color: Colors.white, fontSize: 15, letterSpacing: 1),),
                 Spacer(),
                 Text(
-                  "${postProviderFalse!.proList[index].price}",
+                  "${postProviderFalse!.productList[index].price}",
                   style:
                   TextStyle(color: Colors.white, fontSize: 15, letterSpacing: 1),)
               ],

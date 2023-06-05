@@ -37,6 +37,16 @@ class _PostScreenState extends State<PostScreen> {
             Navigator.pop(context);
           },
         ),
+        actions: [
+          Center(
+            child: Text(
+              "Post",
+              style: TextStyle(
+                  letterSpacing: 1, fontSize: 20, color: Colors.white),
+            ),
+          ),
+          SizedBox(width: 10)
+        ],
       ),
       backgroundColor: Colors.black,
       body: Padding(
@@ -69,7 +79,7 @@ class _PostScreenState extends State<PostScreen> {
                 style: TextStyle(letterSpacing: 1, fontSize: 20),
               ),
             ),
-            Divider(color: Colors.black,thickness: 1),
+            Divider(color: Colors.black, thickness: 1),
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
